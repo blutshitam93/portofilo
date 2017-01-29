@@ -1,0 +1,58 @@
+{
+    "menu": [
+        {
+        	"idElement":"#mainMenu",	
+            "menuItems" : [
+  	        {	
+  	            "menuItem" : "biographie",
+  	            "text" : [
+  	            	{
+  	            		"deutsch":"Biographie"
+  	            	},
+  	            	{
+  	            		"english":"Biographie"
+  	            	}
+  	            ]
+  	        },
+  	        {
+  	            "menuItem" : "prj",
+  	            "text" : [
+  	            	{
+  	            		"deutsch":"Projekt"
+  	            	},
+  	            	{
+  	            		"english":"Project"
+  	            	}
+  	            ]
+  	        },
+  	        {
+  	            "menuItem" : "contact",
+  	            "text" : [
+  	            	{
+  	            		"deutsch":"Kontakt"
+  	            	},
+  	            	{
+  	            		"english":"Contact"
+  	            	}
+  	            ]
+  	        },
+  	        {
+  	            "menuItem" : "language",
+  	            "text" : [
+  	            	{
+  	            		"deutsch":"DE"
+  	            	},
+  	            	{
+  	            		"english":"EN"
+  	            	}
+  	            ]
+  	        }
+        ]
+        }  
+    ],
+    "contact": [
+        {
+            "idElement" : "#contactMe"
+        }
+    ]
+}

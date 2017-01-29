@@ -1,0 +1,259 @@
+
+/*{
+	font-family: Palatino;
+}*/
+
+body{
+	background-color:#FFFFFF;
+	text-align: center;
+}
+
+h2{
+	background-color: red;
+}
+
+h3{
+	display: block;
+}
+
+h4{
+	margin: 0;
+	font-size: 1.4em;
+}
+
+nav a {
+  padding-left: 20px;
+  color: black;
+  }
+nav a:hover, a.current {
+  color: #7275C9;
+  text-decoration: none;
+  }
+
+#oben{
+	background-color:black;
+	color:white;
+}
+
+#header{
+	position: fixed;
+	width: 95px;
+	height: 60px;
+}
+
+#navbar{
+	position: relative;
+	top:10px;
+	left:50%;
+}
+
+#afterheder{
+	font-family: sans-serif;
+	position:fixed;
+	margin-left:-254px;
+	left:60%;
+	background-color: red;
+}
+
+#formular{
+	padding: 10px 50px;
+   width: 600px;
+   float: left;
+   font-size: 18px;
+}
+
+#formular label{
+	display: block;
+}
+
+#end{
+	text-align:center;
+	clear: both;
+	padding: 5px;
+}
+
+#end p {
+	font-size: 11px;
+}
+
+#end hr{
+	width:100%;
+}
+
+#end a{
+	text-decoration: none;
+}
+
+/*#logoMain{
+	width: 81%;
+	margin: 10px 50px;
+	height: 230px;
+}*/
+
+#logo{
+	width: 100%;
+	margin-left:200px;
+}
+
+#main {
+    top: 30px;
+    text-decoration: none;
+}
+
+
+#bioDescrip{
+	margin-left: auto;;
+   margin-right: auto;
+   width: 800px;
+   text-align: center;
+}
+#product {
+	margin-left: auto;;
+   margin-right: auto;
+   width: 800px;
+   text-align: left;
+}
+
+#contAdr{
+	width: 350px;
+   float: left;
+   font-size: 18px;
+	padding: 10px;
+	text-align: left;
+	list-style: none;
+}
+
+#contAdr li{
+	list-style: none;
+}
+
+#serv{
+	width: 81%;
+	margin: 0px 140px;
+	text-align: left;
+}
+img{
+    width: 55%;
+}
+
+
+
+/*new css*/
+ul {
+	list-style-type: none;
+}
+
+#bottomFrame a {
+	text-decoration: none;
+}
+
+#topFrame {
+	padding: 20px 0;
+	color: white;
+	transition: padding .3s;
+}
+
+/*contact*/
+#commContact {
+	resize: none;
+	width: 100%;
+	height: 150px;
+}
+
+#sendContact {
+	width: 30%;
+	height: 30px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+.nt-red {
+	background-color: #FA5858;
+}
+
+.nt-undo-blue {
+	background-color: #073763;
+}
+
+.nt-active-button {
+	background-color: #0b5394;
+}
+
+.nav-menu {
+	font-size: 20px;
+	font-family: arial;
+	cursor: pointer;
+}
+
+.menuFocus {
+	color: #A9F5D0;
+}
+
+.menuSelected {
+ 	background-color: #A9F5D0;
+ 	color: #FA5858;
+}
+
+.highRectSection {
+ 	height: 450px;
+}
+
+.spaceSection {
+ 	height: 50px;
+}
+
+.highRectMottoSection {
+ 	height: 650px;
+}
+
+.item-contact {
+	font-size: 20px;
+	text-align: left;
+	padding: 10px 0px 10px 10px;
+}
+
+.inputField { 
+	border: 0px;
+	border-bottom: solid 1px;
+	width: 100%;
+}
+
+.field-inp {
+	border-bottom: solid 1px;
+	height: 50px;
+}
+
+.text-contc {
+	height: 53px;
+}
+
+.itemToRight {
+	float: right;
+}
+
+.itemToleft {
+	float: left;
+}
+
+
+/*test*/
+ .red {
+ 	background-color: red;
+ }
+
+ .yellow {
+ 	background-color: yellow;
+ }
+
+ .blue {
+ 	background-color: blue;
+ }
+
+ .black {
+ 	background-color: black;
+ }
+ /*test*/
+
+ 
+

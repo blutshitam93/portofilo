@@ -1,2 +1,2 @@
 # portofilo
-This is the example for portofolio in web
+This is the example for my portofolio

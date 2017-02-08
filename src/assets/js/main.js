@@ -39,9 +39,9 @@ function event(){
 	});
 
 	$('#sendContact').mouseover(function(event) {
-		$('#'+ this.id).removeClass('nt-undo-blue').addClass('nt-active-button');
+		$('#'+ this.id).removeClass('nt-light-blue').addClass('nt-active-button');
 	}).mouseleave(function(event) {
-		$('#'+ this.id).removeClass('nt-active-button').addClass('nt-undo-blue');
+		$('#'+ this.id).removeClass('nt-active-button').addClass('nt-light-blue');
 	}).click(function(event) {
 		sendContactForm();
 	});
@@ -173,6 +173,6 @@ function bindMenuToCont(){
 function sendContactForm(){	
 	//TODO send contact
 	$('.inputField').val('');
-
+	console.warn("test tevdtfetdf")
 	//console.log('test send');
 }

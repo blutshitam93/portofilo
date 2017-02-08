@@ -176,8 +176,16 @@ ul {
 	background-color: #073763;
 }
 
+.nt-light-blue {
+	background-color: #A9A9F5;
+}
+
 .nt-active-button {
 	background-color: #0b5394;
+}
+
+.nt-font-cl{
+	color: white;
 }
 
 .nav-menu {

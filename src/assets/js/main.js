@@ -15,7 +15,6 @@ function init(){
 	buildMenu();
 	buildContact();
 	event();
-
 	//TODO change the menu frame!! so it can be removable when scrolling
 	//TODO read element from json
 	//TODO use https://github.com/monobasic/OwlCarousel to have some responsive effect
@@ -43,7 +42,9 @@ function event(){
 	}).mouseleave(function(event) {
 		$('#'+ this.id).removeClass('nt-active-button').addClass('nt-light-blue');
 	}).click(function(event) {
-		sendContactForm();
+		//sendContactForm();
+		getJson();
+		$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
 	});
 
 }
@@ -53,13 +54,14 @@ function event(){
  **/
 function buildMenu(){
 
-	var $menuFrame = $('#menuframe').append('<ul id="mainMenu" class="row"></ul>'),
-		$mainMenu = $('#mainMenu');
-		$menuItem = $('');
+	var $menuFrame = $('#menuframe').append('<div id="mainMenu" class="row"></div>'),
+		$mainMenu  = $('#mainMenu'),
+		$menuItem  = $('');
+		navMenu    = '';
 
 	for(var a = 0; a < menuList.length; a++){
-		//$menuItem = $('<li id="nav-menu-' + menuList[a] + '" class="nav-menu col-md-2">' + menuList[a] + '</li>');		
-		$menuItem = $('<li><div id="nav-menu-' + menuList[a] + '" class="nav-menu col-md-2">' + menuList[a] + '</div></li>');	
+		navMenu = menuList[a].toLowerCase()
+		$menuItem = $('<div id="nav-menu-' + navMenu + '" class="nav-menu col-md-1">' + menuList[a] + '</div>');	
 		$mainMenu.append($menuItem);
 	}
 
@@ -164,7 +166,7 @@ function bindMenuToCont(){
 
 	$topFrame.prepend($menuWeb).prepend($iconWeb);	
 
-	return $('.container').prepend($topFrame);
+	return $topFrame;
 }
 
 /*
@@ -174,5 +176,12 @@ function sendContactForm(){
 	//TODO send contact
 	$('.inputField').val('');
 	console.warn("test tevdtfetdf")
-	//console.log('test send');
+}
+function getJson(){
+	//FIX ME error on console
+	$.getJSON("testConfig.json", function(result){
+            $.each(result, function(key, val){
+                console.log( "<li id='" + key + "'>" + val + "</li>" );
+            });
+        });
 }

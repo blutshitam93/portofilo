@@ -2,7 +2,7 @@
 /*{
 	font-family: Palatino;
 }*/
-
+/*
 body{
 	background-color:#FFFFFF;
 	text-align: center;
@@ -88,7 +88,7 @@ nav a:hover, a.current {
 	width: 81%;
 	margin: 10px 50px;
 	height: 230px;
-}*/
+}
 
 #logo{
 	width: 100%;
@@ -134,13 +134,17 @@ nav a:hover, a.current {
 }
 img{
     width: 55%;
-}
+}*/
 
 
 
 /*new css*/
 ul {
 	list-style-type: none;
+}
+
+#bottomFrame  {
+	text-align: center;
 }
 
 #bottomFrame a {
@@ -225,6 +229,7 @@ ul {
 	border: 0px;
 	border-bottom: solid 1px;
 	width: 100%;
+	color: black;
 }
 
 .field-inp {

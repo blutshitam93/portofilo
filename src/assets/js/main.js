@@ -119,13 +119,13 @@ function gotoSectionMenu( event, idMenu ){
 	var selectedMenu = '';
 	console.log(idMenu);
 	switch(idMenu){
-		case 'nav-menu-Biographie':
+		case 'nav-menu-biographie':
 			selectedMenu = 'bioSection';	
 			break;
-		case 'nav-menu-Project':
+		case 'nav-menu-project':
 			selectedMenu = 'projectSection';	
 			break;
-		case 'nav-menu-Contact':
+		case 'nav-menu-contact':
 			selectedMenu = 'contactSection';	
 			break;	
 	}

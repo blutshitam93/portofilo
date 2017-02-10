@@ -15,6 +15,7 @@ function init(){
 	buildMenu();
 	buildContact();
 	event();
+	scrollMenu();
 	//TODO change the menu frame!! so it can be removable when scrolling
 	//TODO read element from json
 	//TODO use https://github.com/monobasic/OwlCarousel to have some responsive effect
@@ -44,7 +45,7 @@ function event(){
 	}).click(function(event) {
 		//sendContactForm();
 		getJson();
-		$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
+		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
 	});
 
 }
@@ -61,7 +62,7 @@ function buildMenu(){
 
 	for(var a = 0; a < menuList.length; a++){
 		navMenu = menuList[a].toLowerCase()
-		$menuItem = $('<div id="nav-menu-' + navMenu + '" class="nav-menu col-md-1">' + menuList[a] + '</div>');	
+		$menuItem = $('<div id="nav-menu-' + navMenu + '" class="nav-menu col-md-2">' + menuList[a] + '</div>');	
 		$mainMenu.append($menuItem);
 	}
 
@@ -155,14 +156,21 @@ function gotoSectionMenu( event, idMenu ){
 // 	});
 // }
 
+function scrollMenu(){
+	$('body, html').animate({ 
+        scrollMenu: $( '#topFrame').position().top 
+    }, 900);
+}
+
+
 /*
  * menu will be bin 
  **/
 function bindMenuToCont(){
 
 	var	$topFrame = $('#topFrame'),
-		$iconWeb  = $('<div id="iconWebsite" class="col-md-1"></div>'),
-		$menuWeb  = $('<div id="menuframe" class="col-md-11"></div>');
+		$iconWeb  = $('<div id="iconWebsite" class="col-md-4"></div>'),
+		$menuWeb  = $('<div id="menuframe" class="col-md-8"></div>');
 
 	$topFrame.prepend($menuWeb).prepend($iconWeb);	
 

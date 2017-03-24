@@ -48,6 +48,8 @@ function event(){
 		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
 	});
 
+
+
 }
 
 /**
@@ -62,7 +64,7 @@ function buildMenu(){
 
 	for(var a = 0; a < menuList.length; a++){
 		navMenu = menuList[a].toLowerCase()
-		$menuItem = $('<div id="nav-menu-' + navMenu + '" class="nav-menu col-md-2">' + menuList[a] + '</div>');	
+		$menuItem = $('<div id="nav-menu-' + navMenu + '" class="nav-menu nt-font-cl col-md-2">' + menuList[a] + '</div>');	
 		$mainMenu.append($menuItem);
 	}
 
@@ -77,9 +79,13 @@ function buildContact(){
 		$mainTextSect = $('<div id="textContSect" class="row"></div>');
 		$textItem = $('');
 
-
 	for(var a = 0; a < contactList.length; a++){
-		$textItem = $('<div id="text-contc-' + contactList[a] + '" class="item-contact text-contc col-md-12">' + contactList[a] + '</div>');
+		$textItem = $('<div id="text-contc-' + contactList[a] + '" class="form-group">' +
+					  	'<label class="control-label col-sm-2">'+contactList[a]+'</label>'+
+					  	'<div class="col-sm-10"> '+
+					  		'<input class="form-control" id="pwd" placeholder=". . ." type="text">'+
+				  		'</div>'+
+					  '</div>');
 		$mainTextSect.append($textItem);
 	}
 
@@ -133,33 +139,28 @@ function gotoSectionMenu( event, idMenu ){
 
 	$('body, html').animate({ 
         scrollTop: $( '#' + selectedMenu ).position().top 
-    }, 900);
+    }, 1500);
 }
 
-// function scrollMenu(){
-// 	//TODO menu follows window if it scrolls
-// 	 var element = $('#topFrame'),
-//          originalY = element.offset().top;
-//      var topMargin = 20;
-         
-// 	$(window).scroll(function() {
-// 		console.log('test');
-
-// 		///http://stackoverflow.com/questions/2177983/how-to-make-div-follow-scrolling-smoothly-with-jquery
-//     	/*$('#topFrame').css('top', $(this).scrollTop());*/
-//     	/*var scrollTop = $(window).scrollTop();
-//     	 element.stop(false, false).animate({
-//             top: scrollTop < originalY
-//                     ? 0
-//                     : scrollTop - originalY + topMargin
-//         }, 300);*/
-// 	});
-// }
-
 function scrollMenu(){
-	$('body, html').animate({ 
-        scrollMenu: $( '#topFrame').position().top 
-    }, 900);
+    var scroll_start = 0;
+	var topFrame = $('#topFrame');
+   	var offset = topFrame.offset();
+
+   	if (topFrame.length){
+		$(document).scroll(function() { 
+			scroll_start = $(this).scrollTop();
+			if(scroll_start > offset.top) {
+				$("#topFrame").removeClass('nt-undo-blue').addClass('nt-bg-white');
+				$(".nav-menu").removeClass('nt-font-cl').addClass('nt-font-cl-black');
+				$("#iconWebsite").find('img').attr('src', 'assets/img/undoIcon.jpg');
+			} else {
+				$('#topFrame').removeClass('nt-bg-white').addClass('nt-undo-blue');
+				$(".nav-menu").removeClass('nt-font-cl-black').addClass('nt-font-cl');
+				$("#iconWebsite").find('img').attr('src', 'assets/img/undoIconBlue.jpg');
+			}
+		});
+    }
 }
 
 
@@ -169,7 +170,7 @@ function scrollMenu(){
 function bindMenuToCont(){
 
 	var	$topFrame = $('#topFrame'),
-		$iconWeb  = $('<div id="iconWebsite" class="col-md-4"></div>'),
+		$iconWeb  = $('<div id="iconWebsite" class="col-md-4"><img src="assets/img/undoIconBlue.jpg" alt="Logo" height="50" width="50"></div></div>'),
 		$menuWeb  = $('<div id="menuframe" class="col-md-8"></div>');
 
 	$topFrame.prepend($menuWeb).prepend($iconWeb);	

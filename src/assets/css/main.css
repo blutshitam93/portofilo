@@ -155,6 +155,9 @@ ul {
 	padding: 20px 0;
 	color: white;
 	transition: padding .3s;
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
 }
 
 /*contact*/

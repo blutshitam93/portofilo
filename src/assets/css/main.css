@@ -143,6 +143,10 @@ ul {
 	list-style-type: none;
 }
 
+textarea{
+	resize: none;
+}
+
 #bottomFrame  {
 	text-align: center;
 }
@@ -173,6 +177,13 @@ ul {
 	text-align: center;
 	color: white;
 	cursor: pointer;
+}
+
+#contactMe{
+	box-shadow: 0px 5px 10px black, 
+              -10px 5px 15px black, 
+               10px 5px 15px black;
+    margin-bottom: 10px;
 }
 
 .nt-red {

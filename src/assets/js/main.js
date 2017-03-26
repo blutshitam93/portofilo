@@ -13,7 +13,7 @@ function init(){
 
 	bindMenuToCont();
 	buildMenu();
-	buildContact();
+	//buildContact();
 	event();
 	scrollMenu();
 	//TODO change the menu frame!! so it can be removable when scrolling
@@ -26,7 +26,7 @@ function init(){
  **/
 function event(){
 	$('.nav-menu').mousedown(function(){
-		getCurrentMenu( this.id );
+		//getCurrentMenu( this.id );
 	}).mouseover(function() {
 		$('.nav-menu').removeClass('menuFocus');
 		$('#'+ this.id).addClass('menuFocus');
@@ -43,6 +43,12 @@ function event(){
 	}).mouseleave(function(event) {
 		$('#'+ this.id).removeClass('nt-active-button').addClass('nt-light-blue');
 	}).click(function(event) {
+		//sendContactForm();
+		//getJson();
+		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
+	});
+
+	$('#testConfig').click(function(event) {
 		//sendContactForm();
 		getJson();
 		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
@@ -64,7 +70,7 @@ function buildMenu(){
 
 	for(var a = 0; a < menuList.length; a++){
 		navMenu = menuList[a].toLowerCase()
-		$menuItem = $('<div id="nav-menu-' + navMenu + '" class="nav-menu nt-font-cl col-md-2">' + menuList[a] + '</div>');	
+		$menuItem = $('<div id="nav-menu-' + navMenu + '" class="nav-menu nt-font-cl col-sm-3 col-md-2">' + menuList[a] + '</div>');	
 		$mainMenu.append($menuItem);
 	}
 
@@ -156,7 +162,7 @@ function scrollMenu(){
 				$("#iconWebsite").find('img').attr('src', 'assets/img/undoIcon.jpg');
 			} else {
 				$('#topFrame').removeClass('nt-bg-white').addClass('nt-undo-blue');
-				$(".nav-menu").removeClass('nt-font-cl-black').addClass('nt-font-cl');
+				$(".nav-menu").removeClass('nt-font-cl-black menuSelected').addClass('nt-font-cl');
 				$("#iconWebsite").find('img').attr('src', 'assets/img/undoIconBlue.jpg');
 			}
 		});
@@ -170,8 +176,8 @@ function scrollMenu(){
 function bindMenuToCont(){
 
 	var	$topFrame = $('#topFrame'),
-		$iconWeb  = $('<div id="iconWebsite" class="col-md-4"><img src="assets/img/undoIconBlue.jpg" alt="Logo" height="50" width="50"></div></div>'),
-		$menuWeb  = $('<div id="menuframe" class="col-md-8"></div>');
+		$iconWeb  = $('<div id="iconWebsite" class="col-sm-4 col-md-4"><img src="assets/img/undoIconBlue.jpg" alt="Logo" height="50" width="50"></div></div>'),
+		$menuWeb  = $('<div id="menuframe" class="col-sm-8 col-md-8"></div>');
 
 	$topFrame.prepend($menuWeb).prepend($iconWeb);	
 
@@ -188,9 +194,9 @@ function sendContactForm(){
 }
 function getJson(){
 	//FIX ME error on console
-	$.getJSON("testConfig.json", function(result){
-            $.each(result, function(key, val){
-                console.log( "<li id='" + key + "'>" + val + "</li>" );
-            });
+	$.getJSON("config.json", function(result){
+            //$.each(result, function(key, val){
+                //console.log( "<li id='" + key + "'>" + val + "</li>" );
+            //});
         });
 }

@@ -153,7 +153,6 @@ ul {
 
 #topFrame {
 	padding: 20px 0;
-	color: white;
 	transition: padding .3s;
 	position: fixed;
 	z-index: 9999;
@@ -192,8 +191,16 @@ ul {
 	background-color: #0b5394;
 }
 
+.nt-bg-white {
+	background-color: white;
+}
+
 .nt-font-cl{
 	color: white;
+}
+
+.nt-font-cl-black{
+	color: black;
 }
 
 .nav-menu {
@@ -207,7 +214,7 @@ ul {
 }
 
 .menuSelected {
- 	background-color: #A9F5D0;
+ 	/*background-color: #A9F5D0;*/
  	color: #FA5858;
 }
 

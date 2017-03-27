@@ -28,10 +28,10 @@ function event(){
 	$('.nav-menu').mousedown(function(){
 		//getCurrentMenu( this.id );
 	}).mouseover(function() {
-		$('.nav-menu').removeClass('menuFocus');
-		$('#'+ this.id).addClass('menuFocus');
+		//$('.nav-menu').removeClass('menuFocus');
+		//$('#'+ this.id).addClass('menuFocus');
 	}).mouseleave(function() {
-		$('.nav-menu').removeClass('menuFocus');
+		//$('.nav-menu').removeClass('menuFocus');
 	}).click(function( event ) {
 		$('.nav-menu').removeClass('menuSelected');
 		$('#'+ this.id).addClass('menuSelected');

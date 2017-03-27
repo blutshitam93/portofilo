@@ -214,19 +214,42 @@ textarea{
 	color: black;
 }
 
+/*.nav-menu {
+	font-size: 20px;
+	font-family: arial;
+	cursor: pointer;
+}*/
+
 .nav-menu {
 	font-size: 20px;
 	font-family: arial;
 	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+.nav-menu:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.nav-menu:hover:after {
+	width: 100%;
+	background: white;
 }
 
-.menuFocus {
+/*.menuFocus {
 	color: #A9F5D0;
-}
+}*/
 
 .menuSelected {
- 	/*background-color: #A9F5D0;*/
- 	color: #FA5858;
+ 	/*background-color: #A9F5D0;
+ 	color: #FA5858;*/
 }
 
 .highRectSection {

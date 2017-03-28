@@ -54,12 +54,21 @@ function event(){
 		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
 	});
 
+	$('#closeProject').click(function(event) {
+		//sendContactForm();
+		//getJson();
+		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
+		$('#projectSlide').removeClass('nt-show').addClass('nt-hide');
+		console.log("tedtedtfetfde");
+	});
+
 	$('.nt-box-project').mouseover(function(event) {
 		$(this).addClass('nt-box-project-focus');
 	}).mouseleave(function(event) {
 		$(this).removeClass('nt-box-project-focus');
 	}).click(function(event) {
-		showProject($(this).data('project'));
+		showProject($(this).data('projects'));
+		//$('#projectSlide').removeClass('nt-hide').addClass('nt-show')
 	});;
 
 

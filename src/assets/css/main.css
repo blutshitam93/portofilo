@@ -47,6 +47,25 @@ textarea{
     margin-bottom: 10px;
 }
 
+#projectSlide{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: 250px;
+	z-index: 1000;
+	transform: translateX(-50%) translateY(-50%);
+	backface-visibility: hidden;
+	webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+
+}
+
 .nt-red {
 	background-color: #FA5858;
 }
@@ -194,6 +213,14 @@ textarea{
 
 .nt-box-project-focus{
 	background: green;
+}
+
+.nt-hide{
+	visibility: hidden;
+}
+
+.nt-show{
+	visibility: visible;
 }
 
 /*test*/

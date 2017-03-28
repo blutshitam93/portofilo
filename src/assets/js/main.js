@@ -78,7 +78,7 @@ function buildMenu(){
 
 	for(var a = 0; a < menuList.length; a++){
 		navMenu = menuList[a].toLowerCase()
-		$menuItem = $('<div id="nav-menu-' + navMenu + '" class="nav-menu nt-font-cl col-sm-3 col-md-2">' + menuList[a] + '</div>');	
+		$menuItem = $('<div id="nav-menu-' + navMenu + '" class="nav-menu nt-font-cl col-xs-3 col-sm-3 col-md-2">' + menuList[a] + '</div>');	
 		$mainMenu.append($menuItem);
 	}
 
@@ -184,8 +184,8 @@ function scrollMenu(){
 function bindMenuToCont(){
 
 	var	$topFrame = $('#topFrame'),
-		$iconWeb  = $('<div id="iconWebsite" class="col-sm-4 col-md-4"><img src="assets/img/undoIconBlue.jpg" alt="Logo" height="50" width="50"></div></div>'),
-		$menuWeb  = $('<div id="menuframe" class="col-sm-8 col-md-8"></div>');
+		$iconWeb  = $('<div id="iconWebsite" class="col-xs-4 col-sm-4 col-md-4"><img src="assets/img/undoIconBlue.jpg" alt="Logo" height="50" width="50"></div></div>'),
+		$menuWeb  = $('<div id="menuframe" class="col-xs-8 col-sm-8 col-md-8"></div>');
 
 	$topFrame.prepend($menuWeb).prepend($iconWeb);	
 

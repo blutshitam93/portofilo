@@ -1,143 +1,4 @@
 
-/*{
-	font-family: Palatino;
-}*/
-/*
-body{
-	background-color:#FFFFFF;
-	text-align: center;
-}
-
-h2{
-	background-color: red;
-}
-
-h3{
-	display: block;
-}
-
-h4{
-	margin: 0;
-	font-size: 1.4em;
-}
-
-nav a {
-  padding-left: 20px;
-  color: black;
-  }
-nav a:hover, a.current {
-  color: #7275C9;
-  text-decoration: none;
-  }
-
-#oben{
-	background-color:black;
-	color:white;
-}
-
-#header{
-	position: fixed;
-	width: 95px;
-	height: 60px;
-}
-
-#navbar{
-	position: relative;
-	top:10px;
-	left:50%;
-}
-
-#afterheder{
-	font-family: sans-serif;
-	position:fixed;
-	margin-left:-254px;
-	left:60%;
-	background-color: red;
-}
-
-#formular{
-	padding: 10px 50px;
-   width: 600px;
-   float: left;
-   font-size: 18px;
-}
-
-#formular label{
-	display: block;
-}
-
-#end{
-	text-align:center;
-	clear: both;
-	padding: 5px;
-}
-
-#end p {
-	font-size: 11px;
-}
-
-#end hr{
-	width:100%;
-}
-
-#end a{
-	text-decoration: none;
-}
-
-/*#logoMain{
-	width: 81%;
-	margin: 10px 50px;
-	height: 230px;
-}
-
-#logo{
-	width: 100%;
-	margin-left:200px;
-}
-
-#main {
-    top: 30px;
-    text-decoration: none;
-}
-
-
-#bioDescrip{
-	margin-left: auto;;
-   margin-right: auto;
-   width: 800px;
-   text-align: center;
-}
-#product {
-	margin-left: auto;;
-   margin-right: auto;
-   width: 800px;
-   text-align: left;
-}
-
-#contAdr{
-	width: 350px;
-   float: left;
-   font-size: 18px;
-	padding: 10px;
-	text-align: left;
-	list-style: none;
-}
-
-#contAdr li{
-	list-style: none;
-}
-
-#serv{
-	width: 81%;
-	margin: 0px 140px;
-	text-align: left;
-}
-img{
-    width: 55%;
-}*/
-
-
-
 /*new css*/
 ul {
 	list-style-type: none;
@@ -227,7 +88,7 @@ textarea{
 	text-align: center;
 	display: inline-block;
 	position: relative;
-	padding-bottom: 3px;
+	/*padding-bottom: 1px;*/
 }
 .nav-menu:after {
 	content: '';
@@ -243,17 +104,41 @@ textarea{
 	background: white;
 }
 
+.nav-menuFocus:hover:after {
+	width: 100%;
+	background: black;
+}
+
 /*.menuFocus {
 	color: #A9F5D0;
 }*/
 
 .menuSelected {
  	/*background-color: #A9F5D0;
- 	color: #FA5858;*/
+ 	color: #FA5858;
+ 	text-align: center;
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+ 	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+ 	width: 100%;
+	background: black;
+	border-bottom: 3px solid black;
+  	text-decoration: none;
+  	width: 100%; */
 }
 
 .highRectSection {
  	height: 450px;
+}
+
+.highSectionProject {
+ 	height: 200px;
 }
 
 .spaceSection {
@@ -263,6 +148,7 @@ textarea{
 .highRectMottoSection {
  	height: 650px;
 }
+
 
 .item-contact {
 	font-size: 20px;
@@ -294,6 +180,21 @@ textarea{
 	float: left;
 }
 
+.nt-box-shadow{
+	box-shadow: 0px 5px 10px black, 
+              -10px 5px 15px black, 
+               10px 5px 15px black;
+    margin-bottom: 10px;
+}
+
+.nt-box-project{
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.nt-box-project-focus{
+	background: green;
+}
 
 /*test*/
  .red {

@@ -38,6 +38,12 @@ function event(){
 		gotoSectionMenu( event, this.id );
 	});
 
+	$('#testConfig').click(function(event) {
+		//sendContactForm();
+		getJson();
+		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
+	});
+
 	$('#sendContact').mouseover(function(event) {
 		$('#'+ this.id).removeClass('nt-light-blue').addClass('nt-active-button');
 	}).mouseleave(function(event) {
@@ -48,11 +54,13 @@ function event(){
 		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
 	});
 
-	$('#testConfig').click(function(event) {
-		//sendContactForm();
-		getJson();
-		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
-	});
+	$('.nt-box-project').mouseover(function(event) {
+		$(this).addClass('nt-box-project-focus');
+	}).mouseleave(function(event) {
+		$(this).removeClass('nt-box-project-focus');
+	}).click(function(event) {
+		showProject($(this).data('project'));
+	});;
 
 
 
@@ -158,11 +166,11 @@ function scrollMenu(){
 			scroll_start = $(this).scrollTop();
 			if(scroll_start > offset.top) {
 				$("#topFrame").removeClass('nt-undo-blue').addClass('nt-bg-white');
-				$(".nav-menu").removeClass('nt-font-cl').addClass('nt-font-cl-black');
+				$(".nav-menu").removeClass('nt-font-cl').addClass('nt-font-cl-black nav-menuFocus');
 				$("#iconWebsite").find('img').attr('src', 'assets/img/undoIcon.jpg');
 			} else {
 				$('#topFrame').removeClass('nt-bg-white').addClass('nt-undo-blue');
-				$(".nav-menu").removeClass('nt-font-cl-black menuSelected').addClass('nt-font-cl');
+				$(".nav-menu").removeClass('nt-font-cl-black nav-menuFocus').addClass('nt-font-cl');
 				$("#iconWebsite").find('img').attr('src', 'assets/img/undoIconBlue.jpg');
 			}
 		});
@@ -192,6 +200,11 @@ function sendContactForm(){
 	$('.inputField').val('');
 	console.warn("test tevdtfetdf")
 }
+
+function showProject(name){
+	console.log("test click box project " + name);
+}
+
 function getJson(){
 	//FIX ME error on console
 	$.getJSON("config.json", function(result){

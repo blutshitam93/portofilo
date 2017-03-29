@@ -16,6 +16,7 @@ function init(){
 	//buildContact();
 	event();
 	scrollMenu();
+	createBoxProject();
 	//TODO change the menu frame!! so it can be removable when scrolling
 	//TODO read element from json
 	//TODO use https://github.com/monobasic/OwlCarousel to have some responsive effect
@@ -138,11 +139,6 @@ function rmvFocusMenu( idMenu ){
 	$('.nav-menu').removeClass('menuFocus');
 }
 
-
-function topWebsite(  ){
-
-}
-
 function gotoSectionMenu( event, idMenu ){
 //TODO lowercase menuId
 	var selectedMenu = '';
@@ -211,6 +207,20 @@ function sendContactForm(){
 
 function showProject(name){
 	console.log("test click box project " + name);
+
+}
+
+/**
+ *
+ **/
+function createBoxProject(){
+	var	$box 	  = $('.nt-box-project');
+
+	$box.each(function( index ) {
+		$(this).prepend('<h3>' + $(this).data('projects') + '</h3>');
+	});
+
+	return $box;	
 }
 
 function getJson(){

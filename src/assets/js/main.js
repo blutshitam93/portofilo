@@ -59,7 +59,6 @@ function event(){
 		//getJson();
 		//$('#theDiv').prepend($('<img>',{id:'theImg',src:'theImg.png'}))
 		$('#projectSlide').removeClass('nt-show').addClass('nt-hide');
-		console.log("tedtedtfetfde");
 	});
 
 	$('.nt-box-project').mouseover(function(event) {
@@ -68,7 +67,7 @@ function event(){
 		$(this).removeClass('nt-box-project-focus');
 	}).click(function(event) {
 		showProject($(this).data('projects'));
-		//$('#projectSlide').removeClass('nt-hide').addClass('nt-show')
+		$('#projectSlide').removeClass('nt-hide').addClass('nt-show')
 	});;
 
 

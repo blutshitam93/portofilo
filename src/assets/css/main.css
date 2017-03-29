@@ -56,14 +56,13 @@ textarea{
 	min-width: 320px;
 	height: 250px;
 	z-index: 1000;
-	transform: translateX(-50%) translateY(-50%);
 	backface-visibility: hidden;
 	webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	-moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
-
+	transform: translateX(-50%) translateY(-50%);
 }
 
 .nt-red {
@@ -209,6 +208,13 @@ textarea{
 .nt-box-project{
 	cursor: pointer;
 	transition: all 0.5s ease;
+}
+
+.nt-box-project h3 {
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 2.4em;
 }
 
 .nt-box-project-focus{
